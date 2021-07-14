@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspHomework2", "AspHomework2\AspHomework2.csproj", "{52C261F8-882F-40C1-BCC9-6DE6D4168903}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspHomework2Tests", "AspHomework2Tests\AspHomework2Tests.csproj", "{CD77168A-B89C-4199-B807-49781587D0BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52C261F8-882F-40C1-BCC9-6DE6D4168903}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52C261F8-882F-40C1-BCC9-6DE6D4168903}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52C261F8-882F-40C1-BCC9-6DE6D4168903}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52C261F8-882F-40C1-BCC9-6DE6D4168903}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD77168A-B89C-4199-B807-49781587D0BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD77168A-B89C-4199-B807-49781587D0BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD77168A-B89C-4199-B807-49781587D0BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD77168A-B89C-4199-B807-49781587D0BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

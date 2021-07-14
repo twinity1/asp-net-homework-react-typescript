@@ -1,0 +1,47 @@
+@model JobApplicationAnswerViewModel
+
+@{
+    ViewData["Title"] = "Přihláška";
+}
+
+<a asp-controller="JobApplication" asp-action="Index">Zpět</a>
+
+<div class="row">
+    <div class="col-md-12">
+        <div>Číslo: @Model.JobApplication.Id</div>
+        <div>Vytvořeno: @Model.JobApplication.Created.ToString()</div>
+        <div>Email: @Model.JobApplication.Email</div>
+        <div>Telefon: @Model.JobApplication.Phone</div>
+        <div>Text přihlášky:</div>
+        <p>@Model.JobApplication.Content</p>
+        <div>
+        <a href="/files/@Model.JobApplication.CvFilePath">Zobrazit soubor</a>    
+        </div>
+    </div>
+</div>
+
+@using (Html.BeginForm())
+{
+    <div>
+        <div class="form-group">
+            <div>@Html.LabelFor(a => a.Answer)</div>
+            <div>@Html.EditorFor(a => a.Answer)</div>
+        </div>
+        
+        <div class="form-group">
+            <div>@Html.LabelFor(a => a.Accepted)</div>
+            <div>@Html.CheckBoxFor(a => a.Accepted)</div>
+        </div>
+        
+        <div class="form-group">
+            @Html.ValidationSummary()
+        </div>
+        
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary" value="Odeslat">
+        </div>
+    </div>
+}
+
+
+

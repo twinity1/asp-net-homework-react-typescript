@@ -1,0 +1,37 @@
+﻿@model HomeViewModel
+
+@{
+    ViewData["Title"] = "Přihlášky";
+}
+
+<div>
+    <a class="btn btn-primary" asp-action="Index" asp-controller="JobApplication">Další stránka</a>
+</div>
+
+<div id="jobApplicationList">
+    <partial name="_JobApplications" model="Model"/>
+</div>
+
+@section Scripts{
+    <script>
+        (function() {
+            "use strict";
+            
+            const connection = new signalR.HubConnectionBuilder().withUrl("/applicationHub").build();
+
+            connection.on("Refresh", function () {
+                fetch('@Url.Action("RedrawList")').then(async function(response) {
+                    const body = await response.text();
+                                      
+                    document.getElementById("jobApplicationList").innerHTML = body;
+                });
+            });
+              
+            connection.start().then(function () {
+            }).catch(function (err) {
+                return console.error(err.toString());
+            });
+        })();
+    </script>
+}
+

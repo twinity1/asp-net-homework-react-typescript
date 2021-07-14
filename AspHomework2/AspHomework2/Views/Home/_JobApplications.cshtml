@@ -1,0 +1,20 @@
+@model HomeViewModel
+
+@{
+    Layout = null;
+}
+
+<h1>Přihlášky (zbývá @Model.ItemsCount)</h1>
+<div class="row">
+    @foreach (var application in Model.JobApplications)
+    {
+        <div class="col-md-12">
+            <div>#@application.Id</div>
+            <div>@application.Created.ToString()</div>
+            <a href="javascript:void(0)" onclick="alert('@application.Content')">Zobrazit text přihlášky</a>
+            <div>
+            <a href="/files/@application.CvFilePath">Soubor</a>    
+            </div>
+        </div>   
+    }
+</div>

@@ -1,0 +1,21 @@
+@model JobApplicationIndexViewModel
+
+@{
+    ViewData["Title"] = "Přihlášky";
+}
+
+<h1>Všechny přihlášky</h1>
+
+<a asp-controller="Home" asp-action="Index">Zpět</a>
+
+<p>Zbývá @Model.ItemsCount</p>
+
+@foreach (var application in Model.JobApplications)
+{
+    <div>
+        <div>Přihláška č. @application.Id</div>
+        <a class="btn btn-primary" asp-action="Answer" asp-route-id="@application.Id">Odpovědět</a>
+    </div>
+}
+
+
